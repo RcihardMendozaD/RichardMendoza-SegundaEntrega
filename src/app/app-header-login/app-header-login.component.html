@@ -2,6 +2,5 @@
     <button mat-button (click)="onProfile()">Perfil</button>
     <button mat-button (click)="onLoadMovies()">Ver Peliculas</button>
     <button mat-button (click)="onAdminUser()" id="moduleAdminUser" style="display: none;">Admin. Usuarios</button>
-
-    <button mat-button (click)="onShopingCar()"><mat-icon matBadge="{{countMovie}}" matBadgeColor="warn" id="btnCar">add_shopping_cart</mat-icon></button>
+    <button mat-button [routerLink]="['/home']" routerLinkActive="router-link-active" >Cerrar Sesion</button>
 </div>

@@ -22,6 +22,7 @@ import { AppShopingCarComponent } from './app-shoping-car/app-shoping-car.compon
 import { AppMovieInfoComponent } from './app-movie-info/app-movie-info.component';
 import { AppHomeComponent } from './app-home/app-home.component';
 import { AppAdminUserComponent } from './app-admin-user/app-admin-user.component';
+import { AppFooterComponent } from './app-footer/app-footer.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AppAdminUserComponent } from './app-admin-user/app-admin-user.component
     AppShopingCarComponent,
     AppMovieInfoComponent,
     AppHomeComponent,
-    AppAdminUserComponent
+    AppAdminUserComponent,
+    AppFooterComponent
   ],
   imports: [
     BrowserModule,

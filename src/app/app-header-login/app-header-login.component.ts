@@ -11,7 +11,6 @@ export class AppHeaderLoginComponent implements OnInit {
   readonly root_utl = "https://61bd1046d8542f0017824af8.mockapi.io/user";
 
   userId:any;
-  listProduct:any;
   countMovie:number=0;
   listUser:any;
   constructor(public http:HttpClient, private ActivatedRoute: ActivatedRoute, public router:Router) { }
@@ -37,8 +36,5 @@ export class AppHeaderLoginComponent implements OnInit {
   onAdminUser(){
     this.router.navigate(['profile/'+this.userId+'/listUser/']);
   }
-  onShopingCar(){
-    this.listProduct = this.ActivatedRoute.snapshot.paramMap.get('listProduct');
-    this.router.navigate(['profile/'+this.userId+'/shopingCar/']);
-  }
+  
 }

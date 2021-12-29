@@ -13,7 +13,7 @@ import { forkJoin, Observable } from 'rxjs';
 export class AppListMoviesComponent implements OnInit {
   readonly root_utl = "https://61b9300238f69a0017ce5f02.mockapi.io/";
   readonly root_utl_addMovie = "https://61be51602a1dd4001708a2c3.mockapi.io/shopingCar";
-
+  listProduct:any;
   userId:any;
   listMovies:any;
   countAddMovie:number = 0;
@@ -68,5 +68,8 @@ export class AppListMoviesComponent implements OnInit {
                 this.countAddMovie = this.countAddMovie + 1;
     });
   }
-   
+  onShopingCar(){
+    this.listProduct = this.ActivatedRoute.snapshot.paramMap.get('listProduct');
+    this.router.navigate(['profile/'+this.ActivatedRoute.snapshot.paramMap.get('id')+'/shopingCar/']);
+  }
 }

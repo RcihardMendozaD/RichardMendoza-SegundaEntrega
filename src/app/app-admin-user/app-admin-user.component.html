@@ -1,5 +1,8 @@
 <app-app-header-login></app-app-header-login>
-<div>
+<div style="
+    padding-top: 100px;
+    text-align: center;
+">
     <h1>ADMINISTRACIÓN DE USUARIOS</h1>
     <table>
         <thead>
@@ -22,16 +25,16 @@
               <td>{{listUser.rol}}</td>
               <td>{{listUser.fecha}}</td>
               <td>
-                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" >
+                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="onEdit(listUser.id)">
                     <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" >
+                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" data-bs-toggle="modal" data-bs-target="#exampleModalList" (click)="onInfo(listUser.id)">
                     <mat-icon>list</mat-icon>
                 </button>
-                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" >
+                <!--<button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" >
                     <mat-icon>update</mat-icon>
-                </button>
-                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" >
+                </button>-->
+                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" (click)="onDelete(listUser.id)">
                     <mat-icon>delete</mat-icon>
                 </button>
               </td>
@@ -39,3 +42,90 @@
         </tbody>
     </table>
 </div>
+
+
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">EDITAR USUARIO</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Nombres</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{valNombres}}" id="inputNombres">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Apellidos</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{valApellidos}}" id="inputApellidos">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm" >Correo</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"disabled aria-describedby="inputGroup-sizing-sm" value="{{valCorreo}}">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Perfil</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{valPerfil}}" id="inputPerfil">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" (click)="onUpdate(valId)">Actualizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModalList" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">USUARIO</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <table class="table">
+                <tbody>
+                  <tr>
+                    <th scope="row">Nombres:</th>
+                    <td>{{tbNombres}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Apellidos:</th>
+                    <td>{{tbApellidos}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Correo:</th>
+                    <td>{{tbCorreo}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Perfil:</th>
+                    <td>{{tbPerfil}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Genero:</th>
+                    <td>{{tbGenero}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Clave:</th>
+                    <td>{{tbClave}}</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
