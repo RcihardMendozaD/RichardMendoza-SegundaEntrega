@@ -1,0 +1,41 @@
+<app-app-header-login></app-app-header-login>
+<div>
+    <h1>ADMINISTRACIÓN DE USUARIOS</h1>
+    <table>
+        <thead>
+          <tr>
+              <td>ID</td>
+              <td>NOMBRES Y APELLIDOS</td>
+              <td>EMAIL</td>
+              <td>GENERO</td>
+              <td>ROL</td>
+              <td>FECHA</td>
+              <td>CRUD</td>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let listUser of listUser">
+              <td>{{listUser.id}}</td>
+              <td>{{listUser.nombres}},{{listUser.apellidos}}</td>
+              <td>{{listUser.correo}}</td>
+              <td>{{listUser.genero}}</td>
+              <td>{{listUser.rol}}</td>
+              <td>{{listUser.fecha}}</td>
+              <td>
+                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" >
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" >
+                    <mat-icon>list</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" >
+                    <mat-icon>update</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" >
+                    <mat-icon>delete</mat-icon>
+                </button>
+              </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

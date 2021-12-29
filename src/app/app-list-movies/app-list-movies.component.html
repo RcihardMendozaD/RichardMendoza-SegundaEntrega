@@ -1,0 +1,88 @@
+<app-app-header-login></app-app-header-login>
+<h1 style="padding-top: 90px;text-align: center;">¡OBTEN LAS MEJORES PELICULAS!</h1>
+
+<mat-grid-list cols="4" rowHeight="500" class="r-body-movies">
+  <mat-grid-tile *ngFor="let listMovies of listMovies | async">
+    <mat-card class="example-card r-separar">
+      <mat-card-header>
+        <mat-card-title>{{ listMovies.nombre }}</mat-card-title>
+        <mat-card-subtitle>{{ listMovies.clasificacion }}</mat-card-subtitle>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="{{ listMovies.imagen }}"
+        alt="Photo Movie"
+        width="auto"
+        height="200"
+      />
+      <mat-card-content>
+        <p id="details">
+          {{ listMovies.detalle }}
+        </p>
+      </mat-card-content>
+      <mat-card-subtitle>Precio: $ {{ listMovies.costo }}</mat-card-subtitle>
+      <mat-card-subtitle>Cantidad: 1</mat-card-subtitle>
+      <mat-card-actions style="text-align: center; margin-bottom: 10px">
+        <button
+          mat-raised-button
+          color="primary"
+          style="min-width: 150px; max-width: 150px"
+          (click)="addMovie(listMovies.id)"
+        >
+          <mat-icon>playlist_add</mat-icon> AGREGAR
+        </button>
+        <button
+          mat-stroked-button
+          color="primary"
+          style="min-width: 150px; max-width: 150px"
+          (click)="loadInformation(listMovies.id)"
+        >
+          <mat-icon>info</mat-icon> INFORMACIÓN
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+
+<div class="container">
+  <div class="row g-3">
+    <div class="col-sm-3 g-3"  style="width: 18rem;" *ngFor="let listMovies of listMovies | async">
+      <div class="card mb-3">
+        <img src="{{ listMovies.imagen }}" class="card-img-top" width="auto"  height="200">
+        <div class="card-body">
+          <h5 class="card-title">{{ listMovies.nombre }}</h5>
+          <p class="card-text" id="details">{{ listMovies.detalle }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Clasificación: {{ listMovies.clasificacion }}</li>
+          <li class="list-group-item">Precio: $ {{ listMovies.costo }}</li>
+          <li class="list-group-item">Cantidad: 1</li>
+        </ul>
+        <div class="card-body">
+          <button
+          mat-raised-button
+          color="primary"
+          style="min-width: 150px; max-width: 150px"
+          (click)="addMovie(listMovies.id)"
+        >
+          <mat-icon>playlist_add</mat-icon> AGREGAR
+        </button>
+        <button
+          mat-stroked-button
+          color="primary"
+          style="min-width: 150px; max-width: 150px"
+          (click)="loadInformation(listMovies.id)"
+        >
+          <mat-icon>info</mat-icon> INFORMACIÓN
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<button mat-mini-fab color="primary" class="r-btn-flotante">
+  <mat-icon matBadge="{{countAddMovie}}" matBadgeColor="warn" >add_shopping_cart</mat-icon>
+</button>
+   

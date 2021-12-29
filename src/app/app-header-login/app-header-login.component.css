@@ -1,0 +1,10 @@
+.main-div{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  justify-content: center;
+  align-items: center;
+  background: gainsboro;
+  height: 50px;
+  }

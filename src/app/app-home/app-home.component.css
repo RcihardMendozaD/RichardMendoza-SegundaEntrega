@@ -1,0 +1,158 @@
+
+@media (max-width:3000px) {
+    .r-banner-home{
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 500px;
+        max-height: 500px;
+        background: black;
+        text-align: center;
+    }
+    .r-banner-home img{
+        min-width: 1400px;
+        max-width: 1400px;
+        min-height: 500px;
+        max-height: 500px;
+    }
+    .r-banner-home h1{
+        color: #fff;
+        position: absolute;
+        top: 150px;
+        left: 370px;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 45px;
+        font-weight: bold;
+    }
+    .r-banner-home p{
+        color: #fff;
+        position: absolute;
+        top: 220px;
+        left: 370px;
+        font-size: 30px;
+        width: 450px;
+        line-height : 30px;
+        font-family: Arial,Helvetica,sans-serif;
+        text-align: left;
+    }
+    .r-btn-1{
+        color: #fff;
+        position: absolute;
+        top: 320px;
+        left: 370px;
+        font-size: 20px;
+        border-radius: 25px;
+        width: 250px;
+        font-family: Arial,Helvetica,sans-serif;
+        height: 50px;
+    }
+    .r-btn-2{
+        color: #fff;
+        position: absolute;
+        top: 380px;
+        left: 370px;
+        font-size: 20px;
+        border-radius: 25px;
+        width: 250px;
+        font-family: Arial,Helvetica,sans-serif;
+        height: 50px;
+        border: 2px solid #3f51b5;
+    }
+    .r-content-80{
+        min-width: 1400px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    .r-content-80 h1{
+        font-size: 45px;
+        font-weight: bold;
+        margin: 50px 0;
+        text-align: center;
+    }
+    .r-grid-50{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        position: relative;
+    }
+    .r-grid-50 img{
+        padding:0 90px;
+    }
+    .r-grid-50 p{
+        font-family: Arial,Helvetica,sans-serif;
+    }
+}
+@media (max-width:969px) {
+    
+}
+@media (max-width:464px) {
+    .r-banner-home{
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 0;
+        max-height: auto;
+    }
+    .r-banner-home img{
+        min-width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        max-height: auto !important;
+    }
+    .r-banner-home h1{
+        color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 20px;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .r-banner-home p{
+        color: #fff;
+        position: absolute;
+        top: 95px;
+        left: 20px;
+        font-size: 16px;
+        width: 180px;
+        line-height: 16px;
+        font-family: Arial,Helvetica,sans-serif;
+    }
+    .r-banner-home button{
+        color: #fff;
+        position: absolute;
+        top: 150px;
+        left: 20px;
+        font-size: 14px;
+        border-radius: 25px;
+        width: 135px;
+        font-family: Arial,Helvetica,sans-serif;
+        height: 36px;
+    }
+    .r-btn-2{
+        display: none;
+    }
+    .r-content-80{
+        min-width: auto;
+        max-width: auto;
+        margin: 0 auto;
+    }
+    .r-content-80 h1{
+        font-size: 26px;
+        font-weight: bold;
+        margin: 22px 0;
+        text-align: center;
+    }
+    .r-grid-50{
+        display: grid;
+        grid-template-columns: 100%;
+        position: relative;
+    }
+    .r-grid-50 img{
+        width: 100%;
+        padding:0 !important;
+        margin: 0 auto;
+    }
+    .r-grid-50 p{
+        width: 90%;
+        margin: 0 auto;
+        font-family: Arial,Helvetica,sans-serif;
+    }
+}

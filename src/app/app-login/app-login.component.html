@@ -1,0 +1,33 @@
+<app-app-header></app-app-header>
+<div class="main-div">
+    <form class="example-form" [formGroup]="userLogin">
+      <mat-card class="example-card">
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title class="r-text-center">Ingresar Credenciales</mat-card-title>
+        <mat-card-subtitle>
+          <mat-grid-list cols="1" rowHeight="100px">
+            <mat-grid-tile>
+              <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label>Correo Electronico</mat-label>
+                <input matInput placeholder="Ingresar correo electronico" value="" formControlName="correo" required />
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Clave</mat-label>
+                <input
+                  matInput
+                  placeholder="Ingresar clave"
+                  value=""
+                  type="password"
+                  formControlName="clave" required
+                />
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </mat-card-subtitle>
+        <button mat-raised-button color="primary" style="width: 100%;" (click)="onLogin()" [disabled]="!userLogin.valid">Ingresar</button>
+      </mat-card>
+    </form>
+  </div>
+  

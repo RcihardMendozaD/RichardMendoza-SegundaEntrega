@@ -1,0 +1,37 @@
+<app-app-header-login></app-app-header-login>
+  <table>
+      <thead>
+        <tr>
+            <td>ID</td>
+            <td>IMAGEN</td>
+            <td>NOMBRE</td>
+            <td>GENERO</td>
+            <td>CANT.</td>
+            <td>COSTO</td>
+            <td width="100px">DEL.</td>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let Lista of Lista">
+            <td>{{Lista.id}}</td>
+            <img src="{{Lista.imgMovie}}" width="100" height="50">
+            <td>{{Lista.nameMovie}}</td>
+            <td>{{Lista.generoMovie}}</td>
+            <td>
+                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" (click)="editaCountREMOVE(Lista.id,Lista.count)">
+                    <mat-icon>remove</mat-icon>
+                </button>
+                {{Lista.count}}
+                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" (click)="editaCountADD(Lista.id,Lista.count)">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </td>
+            <td>$ {{Lista.costoTotal}}</td>
+            <td> 
+                <button mat-icon-button color="primary" aria-label="Example icon button with a heart icon" (click)="onDeleteMovie(Lista.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+          </tr>
+      </tbody>
+  </table>

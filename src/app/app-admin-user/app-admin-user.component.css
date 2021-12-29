@@ -1,0 +1,19 @@
+
+div{
+    padding-top: 100px;
+    text-align: center;
+}
+table{
+    margin:0 auto;
+    width: 90%;
+    text-align: center;
+}
+thead{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ccc;
+    text-align: center;
+}
+tbody{
+    background-color: #e7e7e7;
+}

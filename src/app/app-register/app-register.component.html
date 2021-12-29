@@ -1,0 +1,65 @@
+<app-app-header></app-app-header>
+<div class="main-div">
+  <form class="example-form" [formGroup]="userRegister">
+    <mat-card class="example-card">
+      <mat-card-title class="r-text-center">Registrar Usuario</mat-card-title>
+      <mat-card-subtitle>
+        <mat-grid-list cols="1" rowHeight="100px">
+          <mat-grid-tile>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Nombres</mat-label>
+              <input matInput placeholder="Ingresar nombres" value="" formControlName="nombres" required />
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Apellidos</mat-label>
+              <input matInput placeholder="Ingresar apellidos" value="" formControlName="apellidos" required />
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field class="example-full-width" appearance="fill" >
+              <mat-label>Correo Electronico</mat-label>
+              <input matInput placeholder="Ingresar correo electronico" value="" formControlName="correo" required />
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Genero</mat-label>
+              <mat-select matNativeControl formControlName="genero" required>
+                <mat-option value="Masculino">Masculino</mat-option>
+                <mat-option value="Femenino">Femenino</mat-option>
+                <mat-option value="Otros">Otros</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Clave</mat-label>
+              <input
+                matInput
+                placeholder="Ingresar clave"
+                value=""
+                type="password"
+                formControlName="clave" required
+              />
+            </mat-form-field>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Repetir Clave</mat-label>
+              <input
+                matInput
+                placeholder="Ingresar clave"
+                value=""
+                type="password"
+                formControlName="claveConfirmacion" required
+              />
+            </mat-form-field>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-subtitle>
+      <button mat-raised-button color="primary" style="width: 100%;" (click)="onRegister()" [disabled]="!userRegister.valid" >Registrar</button>
+    </mat-card>
+  </form>
+</div>
